@@ -1,5 +1,5 @@
 import React from "react";
-
+import { BeakerIcon, MailIcon, LockClosedIcon } from "@heroicons/react/solid";
 function SigninPage({
   email,
   setEmail,
@@ -10,37 +10,37 @@ function SigninPage({
 }) {
   return (
     <>
-      <form className="shadow-xl border border-gray-100 sm:w-6/12 md:w-6/12 lg:w-1/4 w-11/12 rounded-lg py-10 px-5 flex flex-col">
-        <h1 className="text-3xl font-bold ">Sign in</h1>
-        <p className="text-sm text-gray-600 py-1 pb-4">
+      <form className="bg-white w-11/12 sm:w-1/2 md:w-5/12 lg:w-2/6 xl:w-3/12 border border-gray-100  rounded-lg shadow-lg p-6 pb-10">
+        <h1 className="text-3xl">Login</h1>
+        <p className="text-sm text-gray-500 pt-2">
           Stay updated on your professional world
         </p>
-        {/* <h1>{setErrorEmail}</h1> */}
-        <div className="w-full flex flex-col space-y-5 pt-6">
+        <div className="input-icon mt-6">
+          <MailIcon className="h-6 text-gray-500" />
           <input
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            id="email"
             type="text"
-            placeholder="Email or Phone"
-            className="border rounded-lg h-12 pl-3 focus:outline-none transition ease-in-out duration:500 hover:border-gray-400"
+            placeholder="Email"
+            className="h-10 w-full focus:outline-none "
           />
+        </div>
+        <div className="input-icon mt-4">
+          <LockClosedIcon className="h-6 text-gray-500" />
           <input
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            id="password"
             type="password"
             placeholder="Password"
-            className="border rounded-lg h-12 pl-3 focus:outline-none transition ease-in-out duration:500 hover:border-gray-400"
+            className="h-10 w-full focus:outline-none "
           />
-          <span className="link text-blue-700 font-semibold">
-            Forget password
-          </span>
-          <button
-            onClick={onClick}
-            className="bg-blue-700 h-12 rounded-full text-white cursor-pointer hover:bg-blue-900 transition ease-in-out duration-300"
-          >
-            Sign in
-          </button>
         </div>
+        <p className="link pt-4 text-blue-700 font-medium">Forget Password</p>
+        <button onClick={onClick} className="button-primary w-full mt-6">
+          Sign In
+        </button>
       </form>
     </>
   );

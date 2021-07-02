@@ -26,7 +26,7 @@ function Header() {
   };
   return (
     <>
-      <header className="header ">
+      <header className="header">
         <div className="flex lg:w-96 lg:mr-24">
           <img
             src="https://image.flaticon.com/icons/png/512/174/174857.png"

@@ -15,12 +15,12 @@ function ItemNetwork() {
         <h1 className="text-xl flex justify-center mt-6">
           Xuan Hau, want even more updates?
         </h1>
-        <p className="text-sm text-gray-500 flex justify-center text-center pt-2">
+        <p className="text-sm text-gray-500 flex justify-center text-center p-2">
           Add these people you may know to your network, and you'll see their
           updates in the feed.
         </p>
         <div className="w-full mx-auto flex-1 p-4">
-          <div className="grid grid-cols-3 grid-flow-row-dense gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 grid-flow-row-dense gap-4">
             <People
               avatar="https://images.unsplash.com/photo-1544465544-1b71aee9dfa3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHBob3RvfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
               name="Thuy Linh Nguyen"
@@ -59,7 +59,7 @@ function ItemNetwork() {
             />
           </div>
         </div>
-        <div className="border-t w-full mt-6 p-2 hover:bg-blue-50 rounded-b-lg transition ease-in-out duration-300">
+        <div className="border-t w-full mt-6 p-2 hover:bg-blue-50 rounded-b-lg transition ease-in-out">
           <button className="w-full font-semibold text-blue-700">
             Discover More
           </button>

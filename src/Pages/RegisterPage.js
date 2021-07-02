@@ -14,8 +14,8 @@ function RegisterPage({
 }) {
   return (
     <>
-      <h1 className="text-2xl pb-4">Make the most of your professional life</h1>
-      <form className="shadow-xl border border-gray-100 sm:w-6/12 md:w-6/12 lg:w-1/4 w-11/12 rounded-lg pt-5 pb-10 px-5 flex flex-col">
+      <h1 className="text-2xl pb-4 text-center">Make the most of your professional life</h1>
+      <form className="shadow-xl border border-gray-100 w-11/12 sm:w-1/2 md:w-5/12 lg:w-2/6 xl:w-3/12 rounded-lg pt-5 pb-10 px-5 flex flex-col">
         <div className="w-full flex flex-col space-y-4">
           <div className="space-y-2">
             <span className="text-sm text-gray-600 ">Full name</span>

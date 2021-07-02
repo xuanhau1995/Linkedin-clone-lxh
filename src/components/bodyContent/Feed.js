@@ -74,7 +74,7 @@ function Feed() {
           />
         </div>
       </div>
-      <FlipMove>
+      <FlipMove className="relative z-0">
         {posts.map(
           ({
             id,
