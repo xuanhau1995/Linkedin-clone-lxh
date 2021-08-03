@@ -2,6 +2,7 @@ import React from "react";
 import { useHistory } from "react-router";
 import { ChevronRightIcon } from "@heroicons/react/outline";
 import { ArrowCircleRightIcon } from "@heroicons/react/outline";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   const history = useHistory();
@@ -16,12 +17,14 @@ function HomePage() {
 
           <div className="flex ml-auto space-x-2">
             <button className="button-ghost">Join now</button>
-            <button
-              onClick={() => history.push("/loginscreen")}
-              className="button-outline"
-            >
-              Sign in
-            </button>
+            <Link to="/signin">
+              <button
+                // onClick={() => history.push("/loginscreen")}
+                className="button-outline"
+              >
+                Sign in
+              </button>
+            </Link>
           </div>
         </header>
         <div className="flex pt-10 items-center">

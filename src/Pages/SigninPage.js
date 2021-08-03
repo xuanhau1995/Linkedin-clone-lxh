@@ -37,7 +37,7 @@ function SigninPage({
             className="h-10 w-full focus:outline-none "
           />
         </div>
-        <p className="link pt-4 text-blue-700 font-medium">Forget Password</p>
+        <p className="link pt-4 text-blue-700">Forget Password</p>
         <button onClick={onClick} className="button-primary w-full mt-6">
           Sign In
         </button>

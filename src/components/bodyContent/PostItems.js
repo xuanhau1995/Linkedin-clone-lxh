@@ -12,12 +12,15 @@ import {
   ThumbUpIcon,
 } from "@heroicons/react/outline";
 import Reactions from "./Reactions";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../features/userSlice";
 
 const PostItems = forwardRef(
   (
     { name, description, message, photoUrl, IconMore, timestamp, image },
     ref
   ) => {
+    const user = useSelector(selectUser);
     return (
       <div
         ref={ref}
@@ -25,13 +28,15 @@ const PostItems = forwardRef(
       >
         <div className="flex">
           <div className="flex items-center flex-grow p-4">
-            <div name="avatar" className="h-14 w-14 cursor-pointer">
-              <img
-                src="https://scontent.fvca1-1.fna.fbcdn.net/v/t1.6435-9/200044753_1919024448274510_6406781862993563561_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=PLWjc6OZ_JMAX-3xgve&_nc_ht=scontent.fvca1-1.fna&oh=d7f680235d337daa218a2cbcc24eeba7&oe=60DF5595"
-                alt=""
-                className="rounded-full"
-              />
-              {/* <span className="h-3 w-3 border border-white bg-green-600 rounded-full inline-flex absolute bottom-0 right-1"></span> */}
+            <div className="mb-4 relative">
+              <Avatar
+                src={user.photoUrl}
+                style={{ height: 48, width: 48 }}
+                className=" border-white border-2 "
+              >
+                {user.email[0]}
+              </Avatar>
+              <div className="h-3 w-3 bg-green-400 rounded-full border border-white absolute bottom-0 right-2" />
             </div>
             <div className="flex flex-col pl-3 cursor-pointer">
               <h1 className="text-sm font-semibold link">{name}</h1>

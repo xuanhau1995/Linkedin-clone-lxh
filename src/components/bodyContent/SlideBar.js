@@ -17,14 +17,15 @@ function SlideBar() {
               className="w-full h-14 rounded-t-lg"
             />
             <div className="top-4 absolute flex flex-col items-center">
-              <div className="pb-4">
+              <div className="mb-4 relative">
                 <Avatar
                   src={user.photoUrl}
                   style={{ height: 80, width: 80 }}
-                  className=" border-white border-2"
+                  className=" border-white border-2 "
                 >
                   {user.email[0]}
                 </Avatar>
+                <div className="h-3 w-3 bg-green-400 rounded-full border border-white absolute bottom-0 right-4" />
               </div>
               <h1 className="font-semibold hover:underline">
                 {user.displayName}
